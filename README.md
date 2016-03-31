@@ -1,30 +1,29 @@
-![Sketch Data Populator](sketch-data-populator.png)
+# Sketch Squarespace Data Populator
+> A Sketch App plugin to populate your documents with content from a Squarespace website.
 
-## Why Data Populator
+> This repo is a fork of the origin plugin, with a few examples we built from a Squarespace website. We're still in the progress of adding examples and building our Squarespace JSON export tool.
 
-We believe designers should work with _meaningful_ and _realistic_ data as early as possible in the design process for the following reasons:
 
-1. **Content informs design decisions** (and helps you convey your purpose)
-2. **Data are relentless** (so UI components must be designed for robustness)
-3. **It's fun** (seeing your design evolve with meaningful data is motivating and rewarding)
 
-_Sketch Data Populator_ not only makes you more productive (probably around [60x faster](https://vimeo.com/131896485)), it changes the way you design user interfaces (at least that's what happened to us).
+## Overview
+All too often, designers use Lorem Ipsum text and stock images to craft designs. On top of that, mocking up content is sometimes hard. This Sketch App plugin will let you import JSON data directly into Sketch.
 
-## Testing & Credits
 
-Please report bugs, observations, ideas & feature requests as [issues](https://github.com/preciousforever/sketch-data-populator/issues) or [get in touch](mailto:feedback@datapopulator.com).
 
-We conceived _Sketch Data Populator_ to improve our design process for working with data at [precious design studio](http://precious-forever.com/) and developed the plugin in collaboration with [Lukas Ondrej](https://github.com/lukasondrej). Please get in touch if you have questions or comments via [@preciousforever](https://twitter.com/preciousforever) or [our website](http://precious-forever.com/contact).
+## Why JSON?
+Well, it's much easier to work with. Instead of typing out content into Sketch, or finding images and dropping them in, you can use placeholders like `{title}`, `{excerpt}`, or `{image}`. Then you can use this data populator plugin to load that content directly into Sketch. It's beautiful.
+
+
 
 ## Installation
 1. Download the ZIP file (or clone repository)
 2. Move the file ```Sketch Data Populator.sketchplugin``` into your Sketch Plugins folder. In Sketch 3, choose **Plugins › Reveal Plugins Folder…** to open it.
 
+
+
 ## How to use …
 
 The **Sketch Data Populator** plugin creates a grid from a selected element (Layer Group or Artboard) and replaces text and image {placeholders} with data from a JSON source:
-
-![Sketch Data Populator](sketch-data-populator.gif)
 
 ### Here's how it works:
 
@@ -33,6 +32,7 @@ The **Sketch Data Populator** plugin creates a grid from a selected element (Lay
 2. In the same Layer Group, create a Shape Layer (this is your image placeholder). Give the Shape Layer a placeholder name in curly brackets – such as ```{image}```. The plugin's "Populate with …" command will replace this placeholder with respective image data (PNG, JPG).
 
 3. Create another Shape Layer as your icon placeholder. Give it a placeholder name in double curly brackets, something like ```{{icon}}```. Set any of its properties like size, fill color or shadow as desired – all properties will apply to the final icon once populated. The plugin's "Populate with …" command will replace this placeholder with respective icon vector data (SVG).
+
 
 ### All available Commands:
 
@@ -128,3 +128,23 @@ Note that in the example the image file (JPG) and the icon (SVG) are referenced 
 You can also use a full URL to reference your images if that is your preference.
 
 <sup>The mock data in "demo" were created with https://www.mockaroo.com, which is a pretty powerful tool to generate all kinds of data. The "products" images are from apple.com, the "contacts" images from https://randomuser.me/ and http://uifaces.com/</sup>
+
+
+
+## Getting JSON Data
+There's two methods to getting the data for use with this plugin.
+
+1. Manually type out a JSON file and organize your images into subfolders to  creating content presets for various use cases.
+2. Exporting JSON from an existing Squarespace website.
+
+We're going to create a few content presets for you, which should give you some great starting points to work from. You'll be able to edit or add your own.
+
+We're also building a JSON export tool. Right now I primarily use a some command line tools to easily get the JSON from Squarespace. We'll have more on this later as we build out this repo.
+
+
+
+## Testing & Credits
+
+Please report bugs, observations, ideas & feature requests as [issues](https://github.com/preciousforever/sketch-data-populator/issues) or [get in touch](mailto:feedback@datapopulator.com).
+
+We conceived _Sketch Data Populator_ to improve our design process for working with data at [precious design studio](http://precious-forever.com/) and developed the plugin in collaboration with [Lukas Ondrej](https://github.com/lukasondrej). Please get in touch if you have questions or comments via [@preciousforever](https://twitter.com/preciousforever) or [our website](http://precious-forever.com/contact).
